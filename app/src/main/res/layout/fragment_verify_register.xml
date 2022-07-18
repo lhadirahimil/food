@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".ui.verifyRegister.FragmentVerifyRegister">
+
+    <!-- main Scroll view -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--  guide line  -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.21" />
+
+            <!-- white background -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/round_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline45" />
+
+            <!--      go back image view      -->
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_37mdp"
+                android:layout_marginRight="@dimen/_14mdp"
+                android:padding="@dimen/_5mdp"
+                android:src="@drawable/arrow_right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/_180mdp"
+                android:layout_height="@dimen/_180mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/man1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <!--    register text    -->
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_41mdp"
+                android:fontFamily="@font/iran_sans_x_bold"
+                android:text="@string/enter_verify_code"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <!--    hint text    -->
+            <TextView
+                android:id="@+id/tvVerifyCodeHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:alpha="0.7"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:text="لطفا کد تاییدی را که به شماره 09304673884 پیامک شده وارد کنید."
+                android:textColor="@color/grayText"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegister" />
+
+            <!-- input verify code layout -->
+            <LinearLayout
+                android:id="@+id/layoutVerifyCode"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_38mdp"
+                android:layout_marginTop="@dimen/_32mdp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvVerifyCodeHint">
+                <!-- code 1-->
+                <EditText
+                    android:id="@+id/code1"
+                    android:layout_width="@dimen/_38mdp"
+                    android:layout_height="@dimen/_38mdp"
+                    android:layout_marginRight="@dimen/_16mdp"
+                    android:background="@drawable/code_bg"
+                    android:fontFamily="@font/iran_sans_x_regular"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_15mdp"
+                    android:textSize="14sp"
+                    tools:ignore="LabelFor" />
+                <!-- code 2-->
+                <EditText
+                    android:id="@+id/code2"
+                    android:layout_width="@dimen/_38mdp"
+                    android:layout_height="@dimen/_38mdp"
+                    android:layout_marginRight="@dimen/_16mdp"
+                    android:background="@drawable/code_bg"
+                    android:fontFamily="@font/iran_sans_x_regular"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_15mdp"
+                    android:textSize="14sp"
+                    tools:ignore="LabelFor" />
+                <!-- code 3-->
+                <EditText
+                    android:id="@+id/code3"
+                    android:layout_width="@dimen/_38mdp"
+                    android:layout_height="@dimen/_38mdp"
+                    android:layout_marginRight="@dimen/_16mdp"
+                    android:background="@drawable/code_bg"
+                    android:fontFamily="@font/iran_sans_x_regular"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_15mdp"
+                    android:textSize="14sp"
+                    tools:ignore="LabelFor" />
+                <!-- code 4-->
+                <EditText
+                    android:id="@+id/code4"
+                    android:layout_width="@dimen/_38mdp"
+                    android:layout_height="@dimen/_38mdp"
+                    android:background="@drawable/code_bg"
+                    android:fontFamily="@font/iran_sans_x_regular"
+                    android:gravity="center"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/_15mdp"
+                    android:textSize="14sp"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
+
+            <!--    request code text    -->
+            <TextView
+                android:id="@+id/tvRequestNewCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_24mdp"
+                android:alpha="0.7"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:text="درخواست مجدد کد (ارسال مجدد)"
+                android:textColor="@color/grayText"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutVerifyCode" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_40mdp"
+                android:background="@drawable/round_orange"
+                android:enabled="false"
+                android:fontFamily="@font/iran_sans_x_bold"
+                android:text="@string/register_in_application"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/tvRequestNewCode" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

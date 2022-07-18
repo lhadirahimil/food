@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">عنوان استارتاپ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hi_onBording">سلام \n به اپلیکیشن پسینو خوش آمدید</string>
+    <string name="onbording_descroption">در اینجا میتوانید آموزش تمام غذا های مدرن و کلاسیک \n رو ببینید و از درست کردنشون لذت ببرید \n با ما همراه باشید.</string>
+    <string name="lets_start">شروع کنید</string>
+    <string name="register">ثبت نام</string>
+    <string name="register_link"><u>ثبت نام</u></string>
+    <string name="user_name">نام کاربری</string>
+    <string name="user_name_hint">مثال : میلاد سعیدی</string>
+    <string name="phone_number">شماره همراه</string>
+    <string name="phone_hint">مثال : ۰۹۱۲۱۲۳۴۵۶۷</string>
+    <string name="register_in_application">ثبت نام در اپلیکیشن</string>
+    <string name="have_account">حساب کاربری دارید؟</string>
+    <string name="login"><u>ورود</u></string>
+    <string name="enter_verify_code">کد تایید را وارد کنید</string>
+    <string name="enter_phone">شماره همراه خود را وارد کنید</string>
+    <string name="send_code_hint">کد تایید به این شماره ارسال خواهد شد.</string>
+    <string name="dont_have_account">حساب کاربری ندارید ؟</string>
+    <string name="next">بعدی</string>
+    <string name="wrong_phone_number">شماره تلفن وارد شده اشتباه می باشد</string>
+    <string name="login_to_application">ورود به اپلیکیشن</string>
+</resources>

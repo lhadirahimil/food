@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/fragmentSplash">
+
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.hadirahimi.food.ui.splash.FragmentSplash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_fragmentOnBoarding"
+        app:destination="@id/fragmentOnBoarding"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    <fragment
+        android:id="@+id/fragmentOnBoarding"
+        android:name="com.hadirahimi.food.ui.onBoarding.FragmentOnBording"
+        android:label="fragment_on_bording"
+        tools:layout="@layout/fragment_on_boarding">
+        <action
+            android:id="@+id/action_fragmentOnBoarding_to_fragmentRegister"
+            app:destination="@id/fragmentRegister"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_fragmentLogin"
+        app:destination="@id/fragmentLogin" />
+
+    <fragment
+        android:id="@+id/fragmentRegister"
+        android:name="com.hadirahimi.food.ui.register.FragmentRegister"
+        android:label="fragment__register"
+        tools:layout="@layout/fragment__register">
+        <action
+            android:id="@+id/action_fragmentRegister_to_fragmentVerifyRegister"
+            app:destination="@id/fragmentVerifyRegister" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentVerifyRegister"
+        android:name="com.hadirahimi.food.ui.verifyRegister.FragmentVerifyRegister"
+        android:label="fragment_verify_register"
+        tools:layout="@layout/fragment_verify_register" />
+
+    <action
+        android:id="@+id/action_to_fragmentRegister"
+        app:destination="@id/fragmentRegister" />
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.hadirahimi.food.ui.login.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragment_verify_login"
+            app:destination="@id/fragment_verify_login" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_verify_login"
+        android:name="com.hadirahimi.food.ui.verifyLogin.Fragment_verify_login"
+        android:label="fragment_verify_login"
+        tools:layout="@layout/fragment_verify_login" />
+</navigation>

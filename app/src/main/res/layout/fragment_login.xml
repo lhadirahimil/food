@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".ui.login.FragmentLogin">
+
+    <!-- main Scroll view -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--  guide line  -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.21" />
+
+            <!-- white background -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/round_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline45" />
+
+
+            <!--      go back image view      -->
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_37mdp"
+                android:layout_marginRight="@dimen/_14mdp"
+                android:padding="@dimen/_5mdp"
+                android:src="@drawable/arrow_right"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="@dimen/_139mdp"
+                android:layout_height="@dimen/_180mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+
+                android:src="@drawable/man2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+
+            <!--    register text    -->
+            <TextView
+                android:id="@+id/tvRegisterHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_41mdp"
+                android:fontFamily="@font/iran_sans_x_bold"
+                android:text="@string/enter_phone"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <!--    hint text    -->
+            <TextView
+                android:id="@+id/tvPhoneHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:alpha="0.7"
+                android:fontFamily="@font/iran_sans_x_medium"
+                android:text="@string/send_code_hint"
+                android:textColor="@color/grayText"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRegisterHeader" />
+
+            <!-- input phone layout -->
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_16mdp"
+                android:background="@drawable/edittext_bg"
+                android:drawableEnd="@drawable/phone"
+                android:drawablePadding="@dimen/_7mdp"
+                android:fontFamily="@font/iran_sans_x_regular"
+                android:gravity="right|center"
+                android:hint="@string/phone_hint"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:paddingHorizontal="@dimen/_15mdp"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/tvPhoneHint"
+                tools:ignore="RtlHardcoded" />
+
+
+            <!--    request code text    -->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginHorizontal="@dimen/_16mdp"
+                android:layout_marginTop="@dimen/_40mdp"
+                android:background="@drawable/round_orange"
+                android:enabled="true"
+                android:fontFamily="@font/iran_sans_x_bold"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/etPhone" />
+
+            <TextView
+                android:id="@+id/haveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24mdp"
+                android:fontFamily="@font/iran_sans_x_regular"
+                android:text="@string/dont_have_account"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintRight_toRightOf="@id/btnLogin"
+                app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5mdp"
+                android:fontFamily="@font/iran_sans_x_bold"
+                android:text="@string/register_link"
+                android:textColor="@color/blue"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/haveAccount"
+                app:layout_constraintRight_toLeftOf="@id/haveAccount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
